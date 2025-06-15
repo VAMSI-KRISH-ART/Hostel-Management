@@ -1,0 +1,492 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a237e;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 2rem;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-container button {
+    padding: 0.5rem 1rem;
+    background-color: #303f9f;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #303f9f;
+    padding: 0.5rem 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: #1a237e;
+}
+
+#logout-btn {
+    background-color: #f44336;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section {
+    display: none;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+    background: linear-gradient(135deg, #303f9f, #7986cb);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Section Headers */
+section h2 {
+    color: #1a237e;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+section h3 {
+    color: #303f9f;
+    margin: 1.5rem 0 1rem;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Button Styles */
+button {
+    padding: 0.5rem 1rem;
+    background-color: #303f9f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1a237e;
+}
+
+button:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+button[type="reset"] {
+    background-color: #757575;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+/* Card Styles */
+.category-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.category-card, .payment-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.payment-card {
+    text-align: center;
+}
+
+.payment-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Notice Board Styles */
+.notice-item {
+    background-color: #f5f5f5;
+    border-left: 4px solid #303f9f;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.notice-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.notice-date, .notice-author {
+    color: #757575;
+    font-size: 0.875rem;
+}
+
+.notice-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    align-items: center;
+}
+
+/* Leave Management Styles */
+.leave-management button {
+    margin-bottom: 1rem;
+}
+
+/* Chat Styles */
+.chat-container {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-messages {
+    padding: 1rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.message {
+    margin-bottom: 1rem;
+    max-width: 80%;
+}
+
+.message.student {
+    margin-right: auto;
+    background-color: #f5f5f5;
+    border-radius: 8px 8px 8px 0;
+    padding: 0.75rem;
+}
+
+.message.warden {
+    margin-left: auto;
+    background-color: #e3f2fd;
+    border-radius: 8px 8px 0 8px;
+    padding: 0.75rem;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #757575;
+}
+
+.chat-input {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f5f5f5;
+}
+
+.chat-input textarea {
+    flex: 1;
+    resize: none;
+    height: 60px;
+}
+
+.chat-input button {
+    align-self: flex-end;
+    margin-left: 0.5rem;
+}
+
+/* Tab Styles */
+.notice-tabs, .schedule-tabs, .contact-categories {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    overflow-x: auto;
+}
+
+.tab-btn {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn.active {
+    border-bottom: 3px solid #303f9f;
+    color: #303f9f;
+    font-weight: bold;
+}
+
+/* Filter Options */
+.filter-options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-options select {
+    width: auto;
+}
+
+/* Export Options */
+.export-options {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+#confirm-logout {
+    background-color: #f44336;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1a237e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Profile Page Styles */
+.warden-info {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e0e0e0;
+}
+
+.details table {
+    width: 100%;
+}
+
+.details th {
+    width: 40%;
+    background-color: transparent;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.edit-profile {
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .logo, .search-container, .profile {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 0.25rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .warden-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .payment-summary {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
