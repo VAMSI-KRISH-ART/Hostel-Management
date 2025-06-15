@@ -1,5 +1,5 @@
 const LeaveRequest = require('../models/LeaveRequest');
-const User = require('../models/User');
+const User = require('../models/user');
 const { sendSms, sendEmail } = require('../services/notificationService');
 
 exports.applyForLeave = async (req, res) => {

@@ -1,6 +1,6 @@
 // Correct and complete content for controllers/viewController.js
 
-const User = require('../models/User');
+const User = require('../models/user');
 const LeaveRequest = require('../models/LeaveRequest');
 
 // --- Functions for rendering simple pages ---
