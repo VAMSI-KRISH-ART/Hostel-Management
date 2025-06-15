@@ -1,7 +1,7 @@
 // Corrected content for middleware/authMiddleware.js
 
 const jwt = require('jsonwebtoken');
-const User = require('../models/User'); // Check capitalization: uppercase 'U'
+const User = require('../models/user'); // Check capitalization: uppercase 'U'
 
 // This function checks if the user is logged in
 exports.protect = async (req, res, next) => {
